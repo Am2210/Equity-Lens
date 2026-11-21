@@ -1,0 +1,36 @@
+[server]
+enableStaticServing = true
+headless = true
+
+[browser]
+gatherUsageStats = false
+
+[client]
+toolbarMode = "minimal"
+
+[theme]
+base = "light"
+primaryColor = "#183E35"
+backgroundColor = "#F7F5EF"
+secondaryBackgroundColor = "#FFFFFF"
+textColor = "#292D2A"
+linkColor = "#183E35"
+borderColor = "#D9D4C7"
+dataframeHeaderBackgroundColor = "#EFECE3"
+showWidgetBorder = true
+baseRadius = "0.35rem"
+buttonRadius = "0.35rem"
+font = "'DM Sans', Arial, sans-serif"
+headingFont = "Fraunces, Georgia, serif"
+headingFontWeights = [520, 520, 550, 570, 570, 570]
+chartCategoricalColors = ["#183E35", "#A65235", "#847139", "#C57453", "#D4B77C"]
+
+[[theme.fontFaces]]
+family = "DM Sans"
+url = "app/static/dm-sans.ttf"
+weight = "100 1000"
+
+[[theme.fontFaces]]
+family = "Fraunces"
+url = "app/static/fraunces.ttf"
+weight = "100 900"

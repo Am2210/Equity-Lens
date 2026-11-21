@@ -1,0 +1,47 @@
+{
+  "as_of_date": "2026-11-21",
+  "sources": [
+    {
+      "url": "https://www.sec.gov/files/company_tickers.json",
+      "path": "company_tickers.json",
+      "sha256": "6b59e0ed15932cceb6917a79be900062751c66b6c038168abd9d4bff64ae0210",
+      "bytes": 795972
+    },
+    {
+      "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001141391.json",
+      "path": "companyfacts/CIK0001141391.json",
+      "sha256": "eec2f64179fe268380a6f9f4b5e3da53a9c1c5adb988aa31cc40c8372c0d8899",
+      "bytes": 4182087
+    },
+    {
+      "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001403161.json",
+      "path": "companyfacts/CIK0001403161.json",
+      "sha256": "ac85fe9b07ad93c9794908d5537c5ebe2f3551af882c3b84fba87bd1b0d76023",
+      "bytes": 3693161
+    },
+    {
+      "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001633917.json",
+      "path": "companyfacts/CIK0001633917.json",
+      "sha256": "629b6b2b1214630c1da3bff44fb1edf7187d3f61c97ece88d10982fecf3843e1",
+      "bytes": 3160121
+    },
+    {
+      "url": "https://data.sec.gov/submissions/CIK0001141391.json",
+      "path": "submissions/CIK0001141391.json",
+      "sha256": "b07fdc571868ea549026592d241c268089ce48fd0d4a897bf8d03f3f6047b260",
+      "bytes": 159990
+    },
+    {
+      "url": "https://data.sec.gov/submissions/CIK0001403161.json",
+      "path": "submissions/CIK0001403161.json",
+      "sha256": "fdcbdeb70939bca8cbb50ff7454701fc8a427e8d80ea5857d4e58dde9bd0c888",
+      "bytes": 159199
+    },
+    {
+      "url": "https://data.sec.gov/submissions/CIK0001633917.json",
+      "path": "submissions/CIK0001633917.json",
+      "sha256": "65b5986e42d49ea59368664d3e1c7ca739ba73a21eb97536b52570f66b617767",
+      "bytes": 159312
+    }
+  ]
+}
