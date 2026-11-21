@@ -2,9 +2,21 @@
 
 **AI-Assisted Equity Research Workbench** for comparing Visa, Mastercard, and PayPal using their original SEC filings.
 
-An equity analyst can build a peer chart quickly. The harder work is proving that every amount uses the right XBRL concept, fiscal period, reporting basis, and filing. EquityLens carries that evidence from EDGAR through DuckDB and into the Streamlit workbench, where an analyst can open the original filing or export the source lineage.
+![Python 3.12](https://img.shields.io/badge/Python-3.12-3776AB) ![Streamlit](https://img.shields.io/badge/Streamlit-workbench-183E35) ![DuckDB](https://img.shields.io/badge/DuckDB-analytics-8A6D32) ![SQLite FTS5](https://img.shields.io/badge/SQLite-FTS5-54615A)
 
-![EquityLens research overview with Visa FY2025 revenue, operating margin, and free cash flow](docs/screenshots/overview.jpg)
+> **🚀 Live dashboard · Public deployment pending**
+>
+> [Run the dashboard locally](#run-locally) · [See the public deployment plan](#public-deployment)
+
+### Explore the Interactive Dashboard
+
+Compare FY2021–FY2025 performance, trace financial figures to their original SEC filings, and ask research questions with filing-backed citations.
+
+![EquityLens research overview with Visa FY2025 revenue, operating margin, and free cash flow](docs/screenshots/overview.png)
+
+## Project overview
+
+An equity analyst can build a peer chart quickly. The harder work is proving that every amount uses the right XBRL concept, fiscal period, reporting basis, and filing. EquityLens carries that evidence from EDGAR through DuckDB and into the Streamlit workbench, where an analyst can open the original filing or export the source lineage.
 
 ## What works today
 
@@ -13,7 +25,7 @@ An equity analyst can build a peer chart quickly. The harder work is proving tha
 - **Research notebook** combines SQL-backed numerical answers with short extracts from original 10-Ks. It labels reported facts, calculations, management statements, and hypothetical scenarios, and abstains on unsupported requests.
 - **Valuation and methodology** runs an illustrative cash flow sensitivity with editable growth, horizon, discount, and terminal assumptions. It uses the same validated calculations as the analytics engine.
 
-[Peer comparison](docs/screenshots/peer-comparison.jpg) · [Statement explorer](docs/screenshots/statement-lineage.jpg) · [Valuation scenarios](docs/screenshots/valuation.jpg)
+[Peer comparison](docs/screenshots/peer-comparison.png) · [Statement explorer](docs/screenshots/statement-lineage.png) · [Valuation scenarios](docs/screenshots/valuation.png)
 
 ## What the financial analysis found
 
@@ -49,7 +61,7 @@ The operational research mode is **offline and deterministic**. It requires no A
 
 The evaluation checks numeric answers, claim types, filing accessions, citation metadata, and whether excerpts occur at their cited position. Coverage includes missing values, unsupported questions, comparative revisions, and mismatched fiscal periods. The final audit also reconciled selected FY2025 metrics to their original filings and rebuilt the snapshot offline. [Final review and validation](reports/portfolio-review.md)
 
-![Research notebook showing the Visa FY2025 free cash flow answer and its original filing citation](docs/screenshots/research-notebook.jpg)
+![Research notebook showing the calculated change in Visa's FY2025 operating cash flow alongside cited management commentary](docs/screenshots/research-notebook.png)
 
 ### How this differs from a conventional dashboard
 
@@ -80,6 +92,12 @@ Keep the terminal open and visit [EquityLens on localhost](http://127.0.0.1:8514
 ~~~
 
 The repository retains about 5 MB of compressed public source inputs. Extracted caches, warehouses, generated reports, and local environment files are ignored. Fraunces and DM Sans are bundled with their OFL notices. The overview illustration was generated with ImageGen.
+
+## Public deployment
+
+The public GitHub repository contains the workbench and frozen inputs. A hosted instance needs a deployment step that rebuilds the two DuckDB databases and the SQLite filing index from those archives before Streamlit opens them.
+
+Streamlit Community Cloud is the simplest next step. Authorize Streamlit to access this GitHub repository and approve a public deployment with a startup entry point that builds the frozen data on the host. The offline build requires no SEC contact address or AI key. Once the deployed URL opens without authentication, it can go here and in GitHub’s Website field. [Streamlit Community Cloud deployment guide](https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app/deploy)
 
 ## Limitations and next steps
 
