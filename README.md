@@ -1,6 +1,10 @@
 # EquityLens
 
-**AI-Assisted Equity Research Workbench** for comparing Visa, Mastercard, and PayPal using their original SEC filings.
+**Evidence-Backed Equity Research & Financial Intelligence**
+
+**Which payment companies are turning revenue growth into sustainable profitability and cash generation—and how reliable are the financial comparisons behind that conclusion?**
+
+EquityLens investigates this question across Visa, Mastercard, and PayPal from FY2021 through FY2025. It tracks growth consistency, operating profitability, cash generation, and asset efficiency across different payments business models. Analysts can check which fiscal periods and accounting concepts underpin a comparison and trace figures to the original SEC disclosures.
 
 > **[🚀 Launch Live Dashboard](https://equitylens-ywwjzfgfgt8uubb88mgtbk.streamlit.app/)**
 >
@@ -10,20 +14,24 @@
 
 ### Explore the Interactive Dashboard
 
-Compare FY2021–FY2025 performance, trace financial figures to their original SEC filings, and ask research questions with filing-backed citations.
+Start with the peer comparison to see where growth, margins, and cash generation diverge. Open the statement explorer to verify a figure or use the research notebook to find relevant filing excerpts.
 
 ![EquityLens research overview with Visa FY2025 revenue, operating margin, and free cash flow](docs/screenshots/overview.png)
 
-## Project overview
+## Why this project?
 
-An equity analyst can build a peer chart quickly. The harder work is proving that every amount uses the right XBRL concept, fiscal period, reporting basis, and filing. EquityLens carries that evidence from EDGAR through DuckDB and into the Streamlit workbench, where an analyst can open the original filing or export the source lineage.
+Headline revenue, margins, and earnings can obscure whether growth converts into cash or comes with trade-offs in profitability and asset efficiency. Different fiscal year-ends, accounting concepts, and revisions in later filings can also change what appears comparable. EquityLens makes the comparison reproducible by preserving reporting dates, calculation inputs, and filing references so analysts can verify the figures and decide where to investigate further. Investment recommendations fall outside the scope of the workbench.
+
+## Why Visa, Mastercard, and PayPal?
+
+Visa and Mastercard provide a comparison between two major payments networks. PayPal adds a digital payments platform serving consumers and merchants across payment networks. The group lets analysts compare performance within a similar model and see where the picture changes across models. Differences in growth, margins, and cash flow warrant follow-up on business mix and reporting definitions before drawing conclusions. [Visa FY2025 10-K](https://www.sec.gov/Archives/edgar/data/1403161/000140316125000089/v-20250930.htm) · [Mastercard FY2025 10-K](https://www.sec.gov/Archives/edgar/data/1141391/000114139126000013/ma-20251231.htm) · [PayPal FY2025 10-K](https://www.sec.gov/Archives/edgar/data/1633917/000163391726000024/pypl-20251231.htm)
 
 ## What works today
 
-- **Research overview and peer comparison** show FY2021–FY2025 trends, fiscal date ranges, operating profitability, cash generation, and asset efficiency.
-- **Financial statement explorer** exposes formulas and source facts, including XBRL concepts, accessions, dates, and signed calculation inputs. Both comparisons and lineage can be exported.
-- **Research notebook** combines SQL-backed numerical answers with short extracts from original 10-Ks. It labels reported facts, calculations, management statements, and hypothetical scenarios, and abstains on unsupported requests.
-- **Valuation and methodology** runs an illustrative cash flow sensitivity with editable growth, horizon, discount, and terminal assumptions. It uses the same validated calculations as the analytics engine.
+- **Research overview and peer comparison** help analysts assess the consistency of revenue growth, benchmark margins and asset efficiency, and examine how accounting performance translates into operating and free cash flow. Each comparison shows the actual fiscal date ranges.
+- **Financial statement explorer** lets analysts verify a figure before carrying it into a model or research note. It exposes formulas, XBRL concepts, filing accessions, dates, and signed calculation inputs, with exports for both comparisons and source lineage.
+- **Research notebook** pairs deterministic SQL-backed answers with excerpts from original 10-Ks to show how management described a financial change. It labels reported facts, calculations, management statements, and hypothetical scenarios, and abstains on unsupported questions. The deployed assistant makes no model calls.
+- **Valuation and methodology** shows how hypothetical growth, forecast horizon, discount rate, and terminal growth change the illustrative present value of a cash-flow proxy. The sensitivity uses the validated analytics and serves as a scenario exercise.
 
 [Peer comparison](docs/screenshots/peer-comparison.png) · [Statement explorer](docs/screenshots/statement-lineage.png) · [Valuation scenarios](docs/screenshots/valuation.png)
 
