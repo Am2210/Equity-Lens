@@ -106,4 +106,4 @@ Streamlit Community Cloud is the simplest next step. Authorize Streamlit to acce
 - The DCF is a sensitivity exercise on a free-cash-flow proxy. Equity value per share would require adjustments for financing, excess cash, share count, and a fit-for-purpose cash flow definition.
 - Future work includes broader filing coverage, stronger question understanding, and a separately evaluated optional model layer.
 
-[10-minute showcase and technical Q&A](docs/showcase.md) · [Final audit and remaining limitations](reports/portfolio-review.md)
+[FAQ](docs/showcase.md) · [Final audit and remaining limitations](reports/portfolio-review.md)
