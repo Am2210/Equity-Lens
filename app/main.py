@@ -1,9 +1,26 @@
 """Streamlit entry point for the EquityLens Research Atelier."""
 
+import logging
+from pathlib import Path
+import sys
+
 import streamlit as st
+
+# The Streamlit console script adds app/ to sys.path. Imports use the repository root.
+ROOT = str(Path(__file__).resolve().parents[1])
+if ROOT not in sys.path:
+    sys.path.insert(0, ROOT)
 
 from app.data import ISSUERS, NAMES, workbench
 from app.presentation import hero, period_note, rule, stylesheet
+from src.equitylens.bootstrap import BootstrapError, ensure_data
+
+
+@st.cache_resource(show_spinner="Preparing the verified SEC snapshot…")
+def prepare_snapshot():
+    ensure_data()
+    return True
+
 
 st.set_page_config(page_title="EquityLens | The Research Atelier", layout="wide",
                    initial_sidebar_state="collapsed")
@@ -17,6 +34,12 @@ pages = [
 ]
 page = st.navigation(pages, position="top", expanded=True)
 stylesheet()
+try:
+    prepare_snapshot()
+except BootstrapError:
+    logging.getLogger(__name__).exception("EquityLens snapshot initialization failed.")
+    st.error("The bundled SEC snapshot could not be initialized. Check the app logs for the failed step, then reload to retry.")
+    st.stop()
 book = workbench()
 years = sorted(int(year) for year in book.annual.fiscal_year.unique())
 
