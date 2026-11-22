@@ -1,18 +1,8 @@
 # EquityLens showcase
 
-## Ten-minute demonstration
-
-- **0:00–1:00 · Frame the workflow.** A peer chart is easy to build. A reviewer needs to know which fiscal date, filing version, unit and XBRL context produced the number. Introduce the FY2021–FY2025 payments peer set and the frozen November 21, 2026 filing cutoff.
-- **1:00–2:30 · Research overview.** Start on Visa FY2025. Show $40.000 billion revenue, 59.98% operating margin, and $21.577 billion free cash flow. Open the original filing reference.
-- **2:30–4:00 · Peer comparison.** Switch to revenue growth or ROA. Point out Mastercard’s 14.79% revenue CAGR and 29.28% FY2025 ROA. Explain the September versus December fiscal ends. Show the comparison CSV.
-- **4:00–5:45 · Statement explorer.** Inspect Visa free cash flow and show the positive operating-cash-flow input and negative capital-expenditure coefficient. Switch to PayPal’s mapped interest-bearing debt to show how a missing component is disclosed.
-- **5:45–7:45 · Research and responsible AI.** Ask why Visa’s FY2025 operating cash flow increased. Highlight the separate SQL calculation and attributed MD&A evidence. Then ask for a stock-price prediction to show abstention. Explain that responses use deterministic rules and lexical retrieval.
-- **7:45–9:00 · Valuation.** Change the discount rate. Show the illustrative present value and sensitivity matrix and explain which adjustments would be needed for equity value per share.
-- **9:00–10:00 · Reproducibility and close.** Show the data and filing manifests, evaluation summary, and offline rebuild commands. Close with how an analyst can carry evidence from chart to filing to export.
-
 Run the app and open the overview before the demo. The frozen source build supports the walkthrough offline after dependencies are installed.
 
-## Five questions to expect
+## FAQ
 
 ### 1. How do you avoid comparing the wrong fiscal periods?
 
