@@ -2,11 +2,11 @@
 
 **AI-Assisted Equity Research Workbench** for comparing Visa, Mastercard, and PayPal using their original SEC filings.
 
-![Python 3.12](https://img.shields.io/badge/Python-3.12-3776AB) ![Streamlit](https://img.shields.io/badge/Streamlit-workbench-183E35) ![DuckDB](https://img.shields.io/badge/DuckDB-analytics-8A6D32) ![SQLite FTS5](https://img.shields.io/badge/SQLite-FTS5-54615A)
-
-> **🚀 Live dashboard · Public deployment pending**
+> **[🚀 Launch Live Dashboard](https://equitylens-ywwjzfgfgt8uubb88mgtbk.streamlit.app/)**
 >
-> [Run the dashboard locally](#run-locally) · [See the public deployment plan](#public-deployment)
+> The dashboard is public and opens without a sign-in. [Run it locally](#run-locally)
+
+![Python 3.12](https://img.shields.io/badge/Python-3.12-3776AB) ![Streamlit](https://img.shields.io/badge/Streamlit-workbench-183E35) ![DuckDB](https://img.shields.io/badge/DuckDB-analytics-8A6D32) ![SQLite FTS5](https://img.shields.io/badge/SQLite-FTS5-54615A)
 
 ### Explore the Interactive Dashboard
 
@@ -95,9 +95,7 @@ The repository retains about 5 MB of compressed public source inputs. Extracted 
 
 ## Public deployment
 
-The public GitHub repository contains the workbench and frozen inputs. A hosted instance needs a deployment step that rebuilds the two DuckDB databases and the SQLite filing index from those archives before Streamlit opens them.
-
-Streamlit Community Cloud is the simplest next step. Authorize Streamlit to access this GitHub repository and approve a public deployment with a startup entry point that builds the frozen data on the host. The offline build requires no SEC contact address or AI key. Once the deployed URL opens without authentication, it can go here and in GitHub’s Website field. [Streamlit Community Cloud deployment guide](https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app/deploy)
+EquityLens runs on Streamlit Community Cloud from `app/main.py` using Python 3.12. When the local data stores are missing, startup rebuilds the two DuckDB databases and the SQLite filing index from the bundled SEC snapshots and verifies their manifests. The build runs offline and requires no SEC contact address or AI key.
 
 ## Limitations and next steps
 
