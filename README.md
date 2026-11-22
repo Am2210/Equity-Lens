@@ -2,7 +2,7 @@
 
 **Evidence-Backed Equity Research & Financial Intelligence**
 
-**Which payment companies are turning revenue growth into sustainable profitability and cash generation—and how reliable are the financial comparisons behind that conclusion?**
+**Which payment companies are turning revenue growth into sustainable profitability and cash generation and how reliable are the financial comparisons behind that conclusion?**
 
 EquityLens investigates this question across Visa, Mastercard, and PayPal from FY2021 through FY2025. It tracks growth consistency, operating profitability, cash generation, and asset efficiency across different payments business models. Analysts can check which fiscal periods and accounting concepts underpin a comparison and trace figures to the original SEC disclosures.
 
